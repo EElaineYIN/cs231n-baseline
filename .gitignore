@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual envs (we use a shared one outside the repo)
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local outputs we don't need in git
+outputs/predictions_*.jsonl
+
+# CrossTask raw dataset (download separately from
+# https://github.com/DmZhukov/CrossTask)
+data/crosstask/crosstask_release/
+data/crosstask/crosstask_constraints/
+data/crosstask/*.zip
+
+# Downloaded videos (deleted after feature extraction; here as safety net)
+data/crosstask/videos/
+
+# We DO commit:
+#   data/crosstask/clip_features/*.npy   (30-video CLIP feature cache, ~17 MB)
+#   data/crosstask/subtitles/*.json      (YouTube auto-subs for the same 30, ~300 KB)
